@@ -29,7 +29,10 @@ class Number{
 $time_start = microtime(true); 
 
 $number= new Number(600851475143);
-echo end($number->prime_decomposition());
+foreach ($number->prime_decomposition() as $num){
+    echo $num;
+    echo "\n";
+}
 $time_end = microtime(true);
 $execution_time = ($time_end - $time_start);
 echo '<b>Total Execution Time:</b> '.$execution_time.' Sec';
